@@ -6,13 +6,21 @@ import java.util.Scanner;
 // Game where a player guesses a number that the computer picks. 
 public class NumberGuessingGame {
 
+	// User guesses and chances fields
 	private static final int guesses = 3;
 	private static int chances = guesses;
+
+	// Player guesses and computer selection fields
 	private static int playerGuess = -1;
 	private static int computerSelection = -1;
-	private static boolean testingActive = true;
+
+	// Below boolean is for testing purposes.
+	private static boolean testingActive = false;
+
+	// Scanner for taking in the user input and computer choices.
 	private static Scanner input = new Scanner(System.in);
-	
+
+	// Constructor where the computer pick is made. 
 	public NumberGuessingGame(int range) {
 		Random computerPicker = new Random();
 		computerSelection = computerPicker.nextInt(range);
@@ -21,7 +29,9 @@ public class NumberGuessingGame {
 		} // if
 	} // constructor
 
+	// Main method
 	public static void main(String[] args) {
+		
 		// Computer number is picked.
 		do {
 			System.out.print("Please pick a positive number for the maximum value: ");
@@ -34,7 +44,7 @@ public class NumberGuessingGame {
 				System.out.println("Not a correct guess. Try again.");
 			} // if
 		} while (true);
-		
+
 		// Player input is checked.
 		do {
 			System.out.print("Please guess a number: ");
@@ -44,7 +54,7 @@ public class NumberGuessingGame {
 				System.out.println("Not a correct guess. Try again.");
 				continue;
 			} // if
-		
+
 			if (playerGuess == computerSelection) {
 				System.out.println("YOU WIN!");
 				break;
