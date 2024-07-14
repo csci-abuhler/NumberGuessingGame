@@ -20,6 +20,9 @@ public class NumberGuessingGame {
 	// Scanner for taking in the user input and computer choices.
 	private static Scanner input = new Scanner(System.in);
 
+	@SuppressWarnings("unused")
+	private static NumberGuessingGame ngg = null;
+	
 	// Constructor where the computer pick is made. 
 	public NumberGuessingGame(int range) {
 		Random computerPicker = new Random();
@@ -38,7 +41,7 @@ public class NumberGuessingGame {
 			int pick = input.nextInt();
 
 			if (pick > -1) {
-				NumberGuessingGame ngg = new NumberGuessingGame(pick);
+				ngg = new NumberGuessingGame(pick);
 				break;
 			} else {
 				System.out.println("Not a correct guess. Try again.");
