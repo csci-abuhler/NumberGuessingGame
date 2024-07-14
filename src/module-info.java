@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author termi
+ *
+ */
+module NumberGuessingGame {
+}
